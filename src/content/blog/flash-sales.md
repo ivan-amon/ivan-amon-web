@@ -35,7 +35,7 @@ The key decision is in the `tickets` table. Each ticket is its own row with a st
 
 ### Seeing the Problem in Action
 
-Without any concurrency protection, and just a bare CRUD, the results speak for themselves. In this test, 200 simultaneous requests fired against the same endpoint using Apache JMeter — yes, it looks like it's from 2003, but it gets the job done. The database doesn't lie:
+Without any concurrency protection, and just a bare CRUD, the results speak for themselves. In this test, 200 simultaneous requests fired against the same endpoint using Apache JMeter — yes, it looks like it's from 2003, but it gets the job done. The database doesn't lie, 12 orders for 5 tickets:
 
 ![Concurrency Problem](../../assets/images/concurrency-problem.png)
 
