@@ -1,6 +1,6 @@
 export const studies = [
   {
-    title: "Telecommunications Engineering",
+    title: "Telecom Engineering",
     institution: "Universidad Politécnica de Madrid (UPM)",
     description:
       "Undergraduate degree covering programming, networking and signal processing. Building a strong foundation in both hardware and software systems.",

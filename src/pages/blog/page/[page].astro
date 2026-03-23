@@ -3,7 +3,6 @@ import { getCollection } from 'astro:content';
 import BaseHead from '../../../components/BaseHead.astro';
 import Header from '../../../components/sections/Header.astro';
 import Footer from '../../../components/sections/Footer.astro';
-import BlogHero from '../../../components/sections/BlogHero.astro';
 import BlogAllArticles from '../../../components/sections/BlogAllArticles.astro';
 import BlogPagination from '../../../components/ui/nav/BlogPagination.astro';
 
@@ -36,8 +35,12 @@ const totalPages = Math.max(1, Math.ceil(posts.length / PAGE_SIZE));
   </head>
   <body>
     <Header />
-    <BlogHero title="Blog" subtitle="Stories, notes, and learnings." />
     <main class="mx-auto max-w-6xl px-4 py-8 space-y-10">
+      <div class="pb-4 mb-4 border-b border-[var(--color-border-light)]">
+        <h1 class="text-3xl font-extrabold tracking-tight">
+          <span class="bg-gradient-to-r from-[var(--accent)] to-[var(--accent-dark)] bg-clip-text text-transparent">My Blog</span>
+        </h1>
+      </div>
       <BlogAllArticles posts={pagePosts} />
       <BlogPagination currentPage={currentPage} totalPages={totalPages} />
     </main>
