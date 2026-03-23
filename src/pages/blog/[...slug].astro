@@ -1,7 +1,7 @@
 ---
 import { type CollectionEntry, getCollection, render } from 'astro:content';
 import BlogPost from '../../layouts/BlogPost.astro';
-import { calculateReadingTimeFromHtml } from '../../lib/reading';
+import { calculateReadingTimeFromMarkdown } from '../../lib/reading';
 
 export async function getStaticPaths() {
 	const posts = await getCollection('blog');
@@ -21,8 +21,7 @@ const prev = index < sorted.length - 1 ? { id: sorted[index + 1].id, title: sort
 const next = index > 0 ? { id: sorted[index - 1].id, title: sorted[index - 1].data.title } : null;
 
 const { Content } = await render(post);
-const html = await Astro.slots.render('default');
-const readingTimeMin = calculateReadingTimeFromHtml(html ?? '');
+const readingTimeMin = calculateReadingTimeFromMarkdown(post.body ?? '');
 ---
 
 <BlogPost {...post.data} prevPost={prev} nextPost={next} readingTimeMin={readingTimeMin}>

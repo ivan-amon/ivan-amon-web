@@ -1,5 +1,5 @@
 ---
-import { getCollection, render } from 'astro:content';
+import { getCollection } from 'astro:content';
 import BaseHead from '../../components/BaseHead.astro';
 import Footer from '../../components/sections/Footer.astro';
 import Header from '../../components/sections/Header.astro';
@@ -7,19 +7,14 @@ import BlogAllArticles from '../../components/sections/BlogAllArticles.astro';
 import BlogPagination from '../../components/ui/nav/BlogPagination.astro';
 import { SITE_DESCRIPTION, SITE_TITLE } from '../../consts';
 import FeaturedPost from '../../components/ui/card/FeaturedPost.astro';
-import { calculateReadingTimeFromHtml } from '../../lib/reading';
+import { calculateReadingTimeFromMarkdown } from '../../lib/reading';
 
 const PAGE_SIZE = 6;
 const posts = (await getCollection('blog')).sort((a,b)=>+b.data.pubDate-+a.data.pubDate);
 const featured = posts.find(p => p.data.featured) ?? posts[0];
 const firstPagePosts = posts.slice(0, PAGE_SIZE);
 const totalPages = Math.max(1, Math.ceil(posts.length / PAGE_SIZE));
-let featuredReading = 0;
-if (featured) {
-  const { Content } = await render(featured);
-  const html = await Astro.slots.render('default');
-  featuredReading = calculateReadingTimeFromHtml(html ?? '');
-}
+const featuredReading = featured ? calculateReadingTimeFromMarkdown(featured.body ?? '') : 0;
 ---
 
 <!doctype html>
