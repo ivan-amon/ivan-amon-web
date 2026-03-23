@@ -2,7 +2,7 @@
 import type { LogoItem } from '../../../data/logos';
 
 interface Props { tools: LogoItem[]; speedMs?: number; }
-const { tools = [], speedMs = 100000 } = Astro.props as Props;
+const { tools = [], speedMs = 50000 } = Astro.props as Props;
 ---
 
 <div class="overflow-hidden relative z-10 mx-auto px-8 py-4">

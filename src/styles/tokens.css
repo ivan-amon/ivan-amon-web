@@ -1,9 +1,9 @@
 /* Base design tokens and defaults. These map to Starwind's inline theme variables. */
 :root {
   /* Brand */
-  --accent: #FF8A4C;
-  --accent-dark: #F97316;
-  --accent-rgb: 255, 138, 76;
+  --accent: #3B82F6;
+  --accent-dark: #2563EB;
+  --accent-rgb: 59, 130, 246;
 
   /* Neutrals (light baseline; dark overrides live in themes/dark.css) */
   --black: 15, 18, 25;
@@ -32,7 +32,7 @@
   --popover-foreground: #0f1219;
   --primary: var(--accent);
   --primary-foreground: #ffffff;
-  --secondary: #FFB36B;
+  --secondary: #60A5FA;
   --secondary-foreground: #0f1219;
   --muted: rgb(246, 247, 249);
   --muted-foreground: rgb(96, 115, 159);

@@ -1,30 +1,16 @@
 export const studies = [
   {
-    title: "B.S. in Computer Science",
-    institution: "State University",
+    title: "Telecommunications Engineering",
+    institution: "Universidad Politécnica de Madrid (UPM)",
     description:
-      "Core CS foundations: data structures, algorithms, operating systems, networking, and databases; team capstone in web systems.",
+      "Undergraduate degree covering programming, networking and signal processing. Building a strong foundation in both hardware and software systems.",
     tags: [
-      "Algorithms",
-      "Data Structures",
-      "Operating Systems",
-      "Databases",
+      "Programming",
       "Networking",
-    ],
-  },
-  {
-    title: "M.S. in Software Engineering",
-    institution: "Tech Institute",
-    description:
-      "Focus on distributed systems, testing strategies, and cloud architecture; thesis on resilience patterns in microservices.",
-    tags: [
-      "Distributed Systems",
-      "Cloud Architecture",
-      "Testing",
-      "Microservices",
+      "Computer Networks",
+      "Signal Processing",
     ],
   },
 ];
 
 export type StudyItem = (typeof studies)[number];
-

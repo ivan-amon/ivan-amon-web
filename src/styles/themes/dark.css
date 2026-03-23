@@ -1,10 +1,10 @@
 /* Dark theme tokens. Applied when an ancestor sets [data-theme="dark"] or .dark */
 [data-theme="dark"],
 .dark {
-  /* Primary Brand Colors (Flowing Orange) */
-  --accent: #FF8A4C;
-  --accent-dark: #F97316;
-  --accent-rgb: 255, 138, 76;
+  /* Primary Brand Colors (Tech Blue) */
+  --accent: #3B82F6;
+  --accent-dark: #2563EB;
+  --accent-rgb: 59, 130, 246;
 
   /* Neutral Colors */
   --black: 255, 255, 255;
@@ -51,9 +51,9 @@
   --card-foreground: rgb(243, 244, 246);
   --popover: #282c34;
   --popover-foreground: rgb(243, 244, 246);
-  --primary: #FF8A4C;
+  --primary: #3B82F6;
   --primary-foreground: #0f1219;
-  --secondary: #FFB36B;
+  --secondary: #60A5FA;
   --secondary-foreground: rgb(243, 244, 246);
   --muted: rgba(255, 255, 255, 0.06);
   --muted-foreground: rgb(171, 178, 191);
@@ -70,7 +70,7 @@
   /* Slightly softer borders on translucent surfaces */
   --border: var(--surface-300);
   --input: var(--surface-300);
-  --outline: #F97316;
+  --outline: #2563EB;
 }
 
 

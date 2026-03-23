@@ -6,61 +6,49 @@ import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
 import HeroSection from '../components/sections/HeroSection.astro';
 import SkillsSection from '../components/sections/SkillsSection.astro';
 import { skills } from '../data/skills';
-import WorkExperience from '../components/sections/WorkExperience.astro';
-import { work } from '../data/work';
 import Studies from '../components/sections/Studies.astro';
 import { studies } from '../data/studies';
-import Carousel from '../components/ui/carousel/Carousel.astro';
-import { logos } from '../data/logos';
 import ArrowSeparator from '../components/ui/separator/ArrowSeparator.astro'
 import GlowLineSeparator from '../components/ui/separator/GlowLineSeparator.astro'
-
-// Logos
-import astroLogo from '../assets/logos/Astro-logo.svg';
-import googleAdsLogo from '../assets/logos/GoogleAds-logo.svg';
-import posthogLogo from '../assets/logos/posthog-logo.svg';
-import notionLogo from '../assets/logos/Notion-logo.svg';
-import figmaLogo from '../assets/logos/Figma-logo.svg';
-
-// skills are imported from src/data/skills
 ---
 
 <!doctype html>
 <html lang="en" data-theme="dark" class="dark">
 	<head>
 		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-    <!-- JSON-LD: Organization -->
+    <!-- JSON-LD: Person -->
     <script type="application/ld+json" set:html={JSON.stringify({
       '@context': 'https://schema.org',
-      '@type': 'Organization',
-      name: 'Site Author',
+      '@type': 'Person',
+      name: 'Iván Amón',
       url: new URL('/', Astro.site).toString(),
-      logo: new URL('/favicon.svg', Astro.site).toString(),
       sameAs: [
-        'https://x.com/guihubie',
-        'https://www.linkedin.com/in/guilherme-hubie/',
+        'https://www.linkedin.com/in/ivan-amon/',
+        'https://github.com/ivan-amon',
       ],
+      jobTitle: 'Telecommunications Engineering Undergraduate | Software Engineer',
+      alumniOf: {
+        '@type': 'CollegeOrUniversity',
+        name: 'Universidad Politécnica de Madrid',
+      },
     })} />
 	</head>
 	<body>
 		<Header />
 		<main>
       <HeroSection
-        title="Your Headline Goes Here!"
-        subtitle="I build softwares that brings you loyal subscribers."
+        title="Hi, I'm Iván Amón"
+        subtitle="Telecom Engineering student at UPM and Software Engineer. I build software projects, tinker with Linux systems, and deploy architectures with Docker. Let's build something together!"
         showCTA
-        primaryCTA={{ text: 'View Projects', href: '/portfolio' }}
+        primaryCTA={{ text: 'About Me', href: '/about' }}
         secondaryCTA={{ text: 'Read Blog', href: '/blog' }}
       />
-     
 
     <section class="py-6">
       <ArrowSeparator />
-      <SkillsSection title="Skills & Tools" skills={skills} />   
+      <SkillsSection title="Skills & Technologies" skills={skills} />
       <ArrowSeparator />
-      <WorkExperience title="Work Experience" items={work} />
-      <ArrowSeparator />
-      <Studies title="Studies" items={studies} />
+      <Studies title="Education" items={studies} />
       <GlowLineSeparator />
     </section>
 		</main>

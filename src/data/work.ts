@@ -11,73 +11,19 @@ export const workIcons = {
 
 export const work = [
   {
-    title: "Senior Software Engineer",
-    company: "Acme Cloud",
-    region: "United States",
+    title: "Self-taught Software Developer",
+    company: "Personal Projects",
+    region: "Madrid, Spain",
     description:
-      "Led the design and delivery of a multi‑tenant platform, decomposed critical monolith paths into services, improved p95 latency by 40%, defined SLOs and on‑call rotations, and mentored junior engineers.",
+      "Building software engineering projects, tinkering with Linux systems, and deploying containerized architectures with Docker. Focused on learning by doing.",
     technologies: [
-      "TypeScript",
-      "Node.js",
-      "React",
-      "PostgreSQL",
-      "Redis",
-      "AWS",
+      "Linux",
       "Docker",
-      "Kubernetes",
-      "Terraform",
-      "GraphQL",
-    ],
-  },
-  {
-    title: "Staff Software Engineer",
-    company: "FinchPay",
-    region: "Global",
-    description:
-      "Architected event‑driven payment services with idempotency and retries, introduced Kafka for async processing, enforced API versioning, and drove observability with structured logging and tracing.",
-    technologies: [
+      "Python",
       "TypeScript",
-      "NestJS",
-      "Kafka",
-      "PostgreSQL",
-      "Redis",
-      "gRPC",
-      "OpenTelemetry",
-      "AWS",
-    ],
-  },
-  {
-    title: "Senior Frontend Engineer",
-    company: "Insight Analytics",
-    region: "Europe",
-    description:
-      "Owned the design system and SSR/ISR strategy, improved Core Web Vitals (LCP/INP) into the green, and shipped accessible UI components with strong tests and story coverage.",
-    technologies: [
-      "React",
-      "Next.js",
       "Astro",
-      "Tailwind CSS",
-      "Playwright",
-      "Vitest",
-    ],
-  },
-  {
-    title: "Software Engineer",
-    company: "LaunchPad",
-    region: "Brazil",
-    description:
-      "Built MVPs end‑to‑end: designed REST/GraphQL APIs, set up CI/CD with preview environments, introduced feature flags, and migrated data to Postgres.",
-    technologies: [
-      "Node.js",
-      "Express",
-      "GraphQL",
-      "Supabase",
-      "PostgreSQL",
-      "GitHub Actions",
-      "Docker",
     ],
   },
 ];
 
 export type WorkItem = (typeof work)[number];
-

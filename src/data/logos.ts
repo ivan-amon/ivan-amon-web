@@ -21,13 +21,28 @@ function toNiceName(filePath: string): string {
   const spaced = normalized.replace(/([a-z])([A-Z])/g, '$1 $2');
   const trimmed = spaced.trim().replace(/\s{2,}/g, ' ');
   // Title case each word
-  return trimmed.replace(/\b\w/g, (m) => m.toUpperCase());
+  const titled = trimmed.replace(/\b\w/g, (m) => m.toUpperCase());
+
+  // Special display names
+  const displayNames: Record<string, string> = {
+    'Tcpip': 'Networking',
+    'TCPIP': 'Networking',
+    'Sql': 'SQL',
+    'SQL': 'SQL',
+    'C': 'Low Level',
+  };
+  return displayNames[titled] || titled;
 }
+
+const order = ['Linux', 'Docker', 'Networking', 'Low Level', 'Laravel', 'SQL'];
 
 export const logos: LogoItem[] = Object.entries(modules)
   .map(([path, url]) => ({ name: toNiceName(path), logo: url as string }))
-  // Keep only a stable subset first (you can remove slice to include all)
-  .sort((a, b) => a.name.localeCompare(b.name));
+  .sort((a, b) => {
+    const ai = order.indexOf(a.name);
+    const bi = order.indexOf(b.name);
+    return (ai === -1 ? order.length : ai) - (bi === -1 ? order.length : bi);
+  });
 
 export type { LogoItem };
 

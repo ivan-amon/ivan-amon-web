@@ -1,9 +1,9 @@
-import avatar from '../assets/images/sample-avatar.jpg';
+import avatar from '../assets/images/avatar.png';
 
 export const author = {
-  name: 'Site Author',
+  name: 'Iván Amón',
   avatar,
-  url: '#',
+  url: 'https://github.com/ivan-amon',
 };
 
 export type Author = typeof author;
