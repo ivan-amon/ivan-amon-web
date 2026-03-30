@@ -9,7 +9,7 @@ featured: false
 
 <br>
 
-## The Introduction
+## Introduction
 
 In the world of low-level programming, C has long been the gold standard, offering developers total freedom to manage memory manually. However, with great power comes great responsibility, and often, great frustration. Manual management is a double-edged sword that frequently leads to critical issues like **memory leaks**, **dangling pointers**, and **segmentation faults**. Rust enters the scene with a revolutionary promise: providing the performance and control of a systems language while eliminating these memory safety bugs entirely, all without the overhead of a **Garbage Collector** (GC). It achieves this through its most unique feature: **Ownership**.
 
