@@ -3,6 +3,7 @@ import { getCollection } from 'astro:content';
 import BaseHead from '../../../components/BaseHead.astro';
 import Header from '../../../components/sections/Header.astro';
 import Footer from '../../../components/sections/Footer.astro';
+import GlowLineSeparator from '../../../components/ui/separator/GlowLineSeparator.astro';
 import PostCard from '../../../components/ui/card/PostCard.astro';
 import { slugifyTag as slugify } from '../../../lib/slug';
 
@@ -34,6 +35,7 @@ const authorName = posts[0]?.data.author || 'Iván Amón';
         ))}
       </div>
     </main>
+    <GlowLineSeparator class="my-8" />
     <Footer />
   </body>
 </html>

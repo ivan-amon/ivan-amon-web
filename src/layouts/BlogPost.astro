@@ -8,6 +8,7 @@ import Header from '../components/sections/Header.astro';
 import PostMeta from '../components/ui/meta/PostMeta.astro';
 import ShareButtons from '../components/ui/share/ShareButtons.astro';
 import PostNav from '../components/ui/nav/PostNav.astro';
+import GlowLineSeparator from '../components/ui/separator/GlowLineSeparator.astro';
 
 type BlogData = CollectionEntry<'blog'>['data'];
 type Props = BlogData & { showHeader?: boolean; prevPost?: { id: string; title: string } | null; nextPost?: { id: string; title: string } | null; readingTimeMin?: number };
@@ -58,6 +59,7 @@ const { title, description, pubDate, updatedDate, heroImage, showHeader = true, 
 					width: 1280px;
 					max-width: calc(100% - 2em);
 					margin: auto;
+					padding-top: 1.5em;
 					background: var(--color-bg-primary);
 				}
 			.hero-image {
@@ -124,13 +126,14 @@ const { title, description, pubDate, updatedDate, heroImage, showHeader = true, 
                             <hr />
                         </div>
                     )}
-                    <ShareButtons title={title} url={Astro.url.toString()} />
+                    {showHeader && <ShareButtons title={title} url={Astro.url.toString()} />}
 					<PostMeta pubDate={pubDate} readingTimeMin={readingTimeMin} authorName={Astro.props.author || 'Iván Amón'} />
                     <slot />
                     <PostNav prev={prevPost} next={nextPost} />
                 </div>
 			</article>
 		</main>
+		<GlowLineSeparator class="my-8" />
 		<Footer />
 	</body>
 </html>

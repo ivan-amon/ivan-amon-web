@@ -8,6 +8,7 @@ import BlogPagination from '../../components/ui/nav/BlogPagination.astro';
 import { SITE_DESCRIPTION, SITE_TITLE } from '../../consts';
 import FeaturedPost from '../../components/ui/card/FeaturedPost.astro';
 import { calculateReadingTimeFromMarkdown } from '../../lib/reading';
+import GlowLineSeparator from '../../components/ui/separator/GlowLineSeparator.astro';
 
 const PAGE_SIZE = 6;
 const posts = (await getCollection('blog')).sort((a,b)=>+b.data.pubDate-+a.data.pubDate);
@@ -27,22 +28,22 @@ const featuredReading = featured ? calculateReadingTimeFromMarkdown(featured.bod
 	</head>
 	<body>
         <Header />
-        <main class="use-utility-layout mx-auto max-w-5xl px-3 py-5 space-y-7">
-            <div class="pb-4 mb-4 border-b border-[var(--color-border-light)]">
-              <h1 class="text-3xl font-extrabold tracking-tight">
+        <main class="use-utility-layout mx-auto max-w-5xl px-3 pt-7 space-y-7">
+            <div>
+              <h2 class="text-3xl font-bold">
                 <span class="bg-gradient-to-r from-[var(--accent)] to-[var(--accent-dark)] bg-clip-text text-transparent">My Blog</span>
-              </h1>
+              </h2>
             </div>
             {featured && (
-              <section class="card-surface p-4 md:p-5 hover-lift sw-featured-card">
+              <section class="card-surface p-4 md:p-5 hover-lift sw-featured-card mt-6">
                 <FeaturedPost post={featured} readingTimeMin={featuredReading} />
               </section>
             )}
 
-            {/* When another blog will be posted, uncomment this section
+            <GlowLineSeparator class="mt-4" />
             <BlogAllArticles posts={firstPagePosts} />
             <BlogPagination currentPage={1} totalPages={totalPages} />
-            */}
+            <GlowLineSeparator class="my-8" />
         </main>
         <Footer />
 	</body>

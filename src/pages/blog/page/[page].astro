@@ -3,6 +3,7 @@ import { getCollection } from 'astro:content';
 import BaseHead from '../../../components/BaseHead.astro';
 import Header from '../../../components/sections/Header.astro';
 import Footer from '../../../components/sections/Footer.astro';
+import GlowLineSeparator from '../../../components/ui/separator/GlowLineSeparator.astro';
 import BlogAllArticles from '../../../components/sections/BlogAllArticles.astro';
 import BlogPagination from '../../../components/ui/nav/BlogPagination.astro';
 
@@ -44,6 +45,7 @@ const totalPages = Math.max(1, Math.ceil(posts.length / PAGE_SIZE));
       <BlogAllArticles posts={pagePosts} />
       <BlogPagination currentPage={currentPage} totalPages={totalPages} />
     </main>
+    <GlowLineSeparator class="my-8" />
     <Footer />
   </body>
   </html>

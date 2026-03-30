@@ -23,12 +23,14 @@ const { pubDate, readingTimeMin, authorName } = Astro.props as Props;
           <svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true"><path fill="currentColor" d="M19 3h-1V1h-2v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V8h14v11zM7 10h5v5H7z"/></svg>
           <FormattedDate date={pubDate} />
         </div>
-        <div class="flex items-center gap-1">
-          <svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true">
-            <path fill="currentColor" d="M12 22a10 10 0 1 1 0-20 10 10 0 0 1 0 20Zm0-18a8 8 0 1 0 0 16 8 8 0 0 0 0-16Zm1 9h3v-2h-2V7h-2v6Z"/>
-          </svg>
-          <span>{readingTimeMin} min read</span>
-        </div>
+        {readingTimeMin > 0 && (
+          <div class="flex items-center gap-1">
+            <svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true">
+              <path fill="currentColor" d="M12 22a10 10 0 1 1 0-20 10 10 0 0 1 0 20Zm0-18a8 8 0 1 0 0 16 8 8 0 0 0 0-16Zm1 9h3v-2h-2V7h-2v6Z"/>
+            </svg>
+            <span>{readingTimeMin} min read</span>
+          </div>
+        )}
       </div>
     </div>
   </div>

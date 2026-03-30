@@ -71,8 +71,8 @@
   justify-content: center;
 }
 .sw-separator-glow .sw-glow {
-  width: 180px;
-  max-width: 30%;
+  width: 300px;
+  max-width: 70%;
   height: 2px;
   background: linear-gradient(90deg, transparent, var(--accent), transparent);
   filter: blur(0.2px) drop-shadow(0 0 12px rgba(var(--accent-rgb), 0.45));

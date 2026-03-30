@@ -11,13 +11,14 @@ import GlowLineSeparator from "../components/ui/separator/GlowLineSeparator.astr
 <html lang="en" data-theme="dark" class="dark">
   <head>
     <BaseHead title="Portfolio" description="Selected projects and playbooks" />
+    <style>main { padding-top: 1.5em; } main section:first-of-type { padding-bottom: 0.5rem; }</style>
   </head>
   <body>
     <Header />
     <main>
       <HeroSection title="Things I've built" subtitle="Open source work and personal projects." />
       <Projects />
-      <GlowLineSeparator />
+      <GlowLineSeparator class="my-8" />
     </main>
     <Footer />
   </body>
