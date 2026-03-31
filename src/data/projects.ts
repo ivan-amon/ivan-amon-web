@@ -9,13 +9,15 @@ export const projects: {
 	ctaText: string;
 	ctaLink: string;
 	icons?: string[];
+	videoLink?: string;
 }[] = [
 	{
 		title: "Flash Sales",
 		techStack: "Laravel · MySQL · Docker",
 		description: "A high-demand ticket sales system designed to handle concurrency and race conditions. Built with advanced software engineering principles to ensure inventory integrity through a scalable and robust architecture.",
-		ctaText: "View on GitHub →",
+		ctaText: "View on GitHub",
 		ctaLink: "https://github.com/ivan-amon/flash-sales",
 		icons: [laravelIcon, sqlIcon, dockerIcon],
+		videoLink: "https://www.youtube.com/watch?v=Om1l69TtolY",
 	},
 ];
