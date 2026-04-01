@@ -34,7 +34,7 @@ function toNiceName(filePath: string): string {
   return displayNames[titled] || titled;
 }
 
-const order = ['Linux', 'Docker', 'Networking', 'Low Level', 'Laravel', 'SQL'];
+const order = ['Docker', 'Linux', 'Networking', 'Rust', 'Low Level', 'Laravel', 'SQL'];
 
 export const logos: LogoItem[] = Object.entries(modules)
   .map(([path, url]) => ({ name: toNiceName(path), logo: url as string }))
