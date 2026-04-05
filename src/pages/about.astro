@@ -1,19 +1,33 @@
 ---
-import Layout from '../layouts/BlogPost.astro';
-const pageTitle = 'About Me';
-const pageDescription = 'Learn more about Iván Amón — Telecom Engineering student at UPM and self-taught software developer.';
+import Layout from "../layouts/BlogPost.astro";
+const pageTitle = "About Me";
+const pageDescription =
+  "Learn more about Iván Amón — Telecom Engineering student at UPM and self-taught software developer.";
 ---
 
-<Layout title={pageTitle} description={pageDescription} pubDate={new Date()} showHeader={false}>
+<Layout
+  title={pageTitle}
+  description={pageDescription}
+  pubDate={new Date()}
+  showHeader={false}
+>
   <p>
-    Hey! I'm Iván Amón, a Telecom Engineering student at Universidad Politécnica de Madrid (UPM) and a self-taught software developer.
+    Hey! I'm Iván Amón, a Software Engineer focused on backend development and
+    systems programming.
   </p>
   <p>
-    University taught me one thing above all: resilience — working through complex architectures, managing frustration, and pushing through until it clicks.
+    I learn by building. I believe technologies are a means to an end, not the
+    end itself. I currently divide my technical focus between constructing
+    robust backend architectures (using tools like Laravel and MySQL) and diving
+    into low-level systems programming with Rust. I feel at home in Linux
+    environments, manage containerized deployments with Docker, and actively
+    leverage AI tools like Claude Code to iterate faster and write cleaner code.
   </p>
   <p>
-    Outside of theory, I learn by building. I tinker with Linux systems, develop personal software projects, and deploy containerized architectures with Docker. I also use AI tools like Claude Code to move faster and adopt better practices.
+    I balance this hands-on approach with my degree in Telecommunications
+    Engineering at UPM. While the university gives me a solid theoretical
+    foundation in networking and architectures, its greatest lesson has been
+    resilience—the grit to face complex systems, manage frustration when things
+    break, and push through until I find the solution.
   </p>
-
-
 </Layout>
