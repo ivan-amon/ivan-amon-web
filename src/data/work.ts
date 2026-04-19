@@ -19,9 +19,9 @@ export const work = [
     technologies: [
       "Linux",
       "Docker",
-      "Python",
-      "TypeScript",
-      "Astro",
+      "Rust",
+      "C",
+      "SQL",
     ],
   },
 ];

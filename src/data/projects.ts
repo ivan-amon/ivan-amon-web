@@ -28,6 +28,6 @@ export const projects: {
 		description: "A multithreaded HTTP server built from the ground up to explore systems programming. Implements low-level networking, manual protocol parsing, and a custom thread pool architecture.",
 		ctaText: "View on GitHub",
 		ctaLink: "https://github.com/ivan-amon/rust-http-server",
-		icons: [rustIcon, tcpipIcon],
+		icons: [rustIcon, tcpipIcon, dockerIcon],
 	},
 ];
