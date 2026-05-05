@@ -17,7 +17,7 @@ export const projects: {
 	{
 		title: "XSCP",
 		techStack: "Rust · Low Level · Networking",
-		description: "Text-based chat protocol over TCP. The protocol specification, the server, and the client are all designed and implemented from scratch in Rust, with no external protocol libraries.",
+		description: "Text-based communication protocol over TCP. The protocol specification, the server, and the client are all designed and implemented from scratch in Rust, with no external protocol libraries.",
 		ctaText: "View on GitHub",
 		ctaLink: "https://github.com/ivan-amon/xscp",
 		icons: [rustIcon, tcpipIcon, dockerIcon],
