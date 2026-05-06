@@ -29,7 +29,7 @@ const { title, description, pubDate, updatedDate, heroImage, showHeader = true, 
 		))}
 
 		<!-- JSON-LD: Article -->
-		<script type="application/ld+json" set:html={JSON.stringify({
+		<script is:inline type="application/ld+json" set:html={JSON.stringify({
 		  '@context': 'https://schema.org',
 		  '@type': 'Article',
 		  headline: title,
@@ -37,14 +37,24 @@ const { title, description, pubDate, updatedDate, heroImage, showHeader = true, 
 		  image: Astro.props.heroImage ? new URL(Astro.props.heroImage.src, Astro.site).toString() : undefined,
 		  datePublished: pubDate ? new Date(pubDate).toISOString() : undefined,
 		  dateModified: updatedDate ? new Date(updatedDate).toISOString() : undefined,
-		  author: [{ '@type': 'Person', name: Astro.props.author || 'Iván Amón' }],
-		  publisher: { '@type': 'Organization', name: 'guihubie.com' },
+		  author: [
+		    Astro.props.author && Astro.props.author !== 'Iván Amón'
+		      ? { '@type': 'Person', name: Astro.props.author }
+		      : {
+		          '@type': 'Person',
+		          '@id': new URL('/#person', Astro.site).toString(),
+		          name: 'Iván Amón',
+		          alternateName: 'Iván Amón Bystrova',
+		          url: new URL('/about/', Astro.site).toString(),
+		        },
+		  ],
+		  publisher: { '@type': 'Organization', name: 'ivanamon.dev' },
 		  mainEntityOfPage: new URL(Astro.url.pathname, Astro.site).toString(),
 		  url: new URL(Astro.url.pathname, Astro.site).toString(),
 		})} />
 
 		<!-- JSON-LD: Breadcrumbs -->
-		<script type="application/ld+json" set:html={JSON.stringify({
+		<script is:inline type="application/ld+json" set:html={JSON.stringify({
 		  '@context': 'https://schema.org',
 		  '@type': 'BreadcrumbList',
 		  itemListElement: [

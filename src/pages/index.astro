@@ -20,8 +20,13 @@ import GlowLineSeparator from '../components/ui/separator/GlowLineSeparator.astr
     <script type="application/ld+json" set:html={JSON.stringify({
       '@context': 'https://schema.org',
       '@type': 'Person',
-      name: 'Iván Amón',
+      '@id': new URL('/#person', Astro.site).toString(),
+      name: 'Iván Amón Bystrova',
+      givenName: 'Iván',
+      familyName: 'Amón Bystrova',
+      alternateName: ['Iván Amón', 'Ivan Amon Bystrova', 'Ivan Amon'],
       url: new URL('/', Astro.site).toString(),
+      mainEntityOfPage: new URL('/about/', Astro.site).toString(),
       sameAs: [
         'https://www.linkedin.com/in/ivan-amon/',
         'https://github.com/ivan-amon',

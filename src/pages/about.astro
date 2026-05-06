@@ -1,8 +1,8 @@
 ---
 import Layout from "../layouts/BlogPost.astro";
-const pageTitle = "About Me";
+const pageTitle = "About — Iván Amón Bystrova";
 const pageDescription =
-  "Learn more about Iván Amón — Telecom Engineering student at UPM and self-taught software developer.";
+  "About Iván Amón Bystrova (Iván Amón) — Telecom Engineering student at UPM and self-taught software developer focused on backend development and systems programming.";
 ---
 
 <Layout
@@ -11,8 +11,30 @@ const pageDescription =
   pubDate={new Date()}
   showHeader={false}
 >
+  <script is:inline type="application/ld+json" set:html={JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'ProfilePage',
+    mainEntity: {
+      '@type': 'Person',
+      '@id': new URL('/#person', Astro.site).toString(),
+      name: 'Iván Amón Bystrova',
+      givenName: 'Iván',
+      familyName: 'Amón Bystrova',
+      alternateName: ['Iván Amón', 'Ivan Amon Bystrova', 'Ivan Amon'],
+      url: new URL('/', Astro.site).toString(),
+      sameAs: [
+        'https://www.linkedin.com/in/ivan-amon/',
+        'https://github.com/ivan-amon',
+      ],
+      jobTitle: 'Telecom Engineering Undergraduate | Software Engineer',
+      alumniOf: {
+        '@type': 'CollegeOrUniversity',
+        name: 'Universidad Politécnica de Madrid',
+      },
+    },
+  })} />
   <p>
-    Hey! I'm Iván Amón, a Software Engineer focused on backend development and
+    Hey! I'm Iván Amón Bystrova, a Software Engineer focused on backend development and
     systems programming.
   </p>
   <p>
