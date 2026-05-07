@@ -3,6 +3,7 @@ title: 'My First Encounter with Ownership'
 description: "Exploring Rust's ownership system and how it changes the way you think about memory."
 pubDate: "March 30 2026"
 heroImage: "../../assets/images/rust-ownership.png"
+heroImageAlt: "Rust ownership and memory management rules diagram"
 tags: ["rust", "low level"]
 featured: false
 ---

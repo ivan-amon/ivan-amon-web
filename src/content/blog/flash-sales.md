@@ -3,6 +3,7 @@ title: 'How I built Flash Sales'
 description: "Ticketing system for high-demand events."
 pubDate: "March 23 2026"
 heroImage: "../../assets/images/flash-sales-blog-image.png"
+heroImageAlt: "Flash Sales — Laravel ticketing API for high-demand events"
 tags: ["laravel", "sql", "backend"]
 featured: true
 ---

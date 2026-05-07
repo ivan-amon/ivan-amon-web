@@ -3,6 +3,7 @@ title: 'Building an HTTP Server from Scratch'
 description: "Building a concurrent HTTP Server with a thread pool from scratch in Rust using only 'std::net' and 'std::thread'. No frameworks, no external crates—just pure systems programming."
 pubDate: "April 19 2026"
 heroImage: "../../assets/images/rust-http-server.png"
+heroImageAlt: "Multithreaded HTTP server in Rust with a thread pool — architecture diagram"
 tags: ["networking", "rust", "low level"]
 featured: false
 ---

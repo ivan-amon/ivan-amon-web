@@ -1,4 +1,4 @@
-import avatar from '../assets/images/avatar.png';
+import avatar from '../assets/images/ivan-amon-bystrova.png';
 
 export const author = {
   name: 'Iván Amón',

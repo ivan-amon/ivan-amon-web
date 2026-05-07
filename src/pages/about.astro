@@ -1,8 +1,10 @@
 ---
 import Layout from "../layouts/BlogPost.astro";
+import { author } from "../data/author";
 const pageTitle = "About — Iván Amón Bystrova";
 const pageDescription =
   "About Iván Amón Bystrova (Iván Amón) — Telecom Engineering student at UPM and self-taught software developer focused on backend development and systems programming.";
+const avatarUrl = new URL(author.avatar.src, Astro.site).toString();
 ---
 
 <Layout
@@ -22,6 +24,11 @@ const pageDescription =
       familyName: 'Amón Bystrova',
       alternateName: ['Iván Amón', 'Ivan Amon Bystrova', 'Ivan Amon'],
       url: new URL('/', Astro.site).toString(),
+      image: {
+        '@type': 'ImageObject',
+        url: avatarUrl,
+        caption: 'Iván Amón Bystrova',
+      },
       sameAs: [
         'https://www.linkedin.com/in/ivan-amon/',
         'https://github.com/ivan-amon',

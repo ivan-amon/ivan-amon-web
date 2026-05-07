@@ -10,6 +10,9 @@ import Studies from '../components/sections/Studies.astro';
 import { studies } from '../data/studies';
 import ArrowSeparator from '../components/ui/separator/ArrowSeparator.astro'
 import GlowLineSeparator from '../components/ui/separator/GlowLineSeparator.astro'
+import { author } from '../data/author';
+
+const avatarUrl = new URL(author.avatar.src, Astro.site).toString();
 ---
 
 <!doctype html>
@@ -17,7 +20,7 @@ import GlowLineSeparator from '../components/ui/separator/GlowLineSeparator.astr
 	<head>
 		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
     <!-- JSON-LD: Person -->
-    <script type="application/ld+json" set:html={JSON.stringify({
+    <script is:inline type="application/ld+json" set:html={JSON.stringify({
       '@context': 'https://schema.org',
       '@type': 'Person',
       '@id': new URL('/#person', Astro.site).toString(),
@@ -27,6 +30,11 @@ import GlowLineSeparator from '../components/ui/separator/GlowLineSeparator.astr
       alternateName: ['Iván Amón', 'Ivan Amon Bystrova', 'Ivan Amon'],
       url: new URL('/', Astro.site).toString(),
       mainEntityOfPage: new URL('/about/', Astro.site).toString(),
+      image: {
+        '@type': 'ImageObject',
+        url: avatarUrl,
+        caption: 'Iván Amón Bystrova',
+      },
       sameAs: [
         'https://www.linkedin.com/in/ivan-amon/',
         'https://github.com/ivan-amon',
