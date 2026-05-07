@@ -13,6 +13,7 @@ export const projects: {
 	icons?: string[];
 	videoLink?: string;
 	cratesLink?: string;
+	docsLink?: string;
 }[] = [
 	{
 		title: "XSCP",
@@ -22,6 +23,7 @@ export const projects: {
 		ctaLink: "https://github.com/ivan-amon/xscp",
 		icons: [rustIcon, tcpipIcon, dockerIcon],
 		cratesLink: "https://crates.io/crates/xscp",
+		docsLink: "https://xscp.ivanamon.dev/",
 	},
 	{
 		title: "Flash Sales",
