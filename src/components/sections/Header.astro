@@ -1,7 +1,6 @@
 ---
 import { SITE_TITLE } from '../../consts';
 import HeaderLink from './HeaderLink.astro';
-import ThemeToggle from '../ui/button/ThemeToggle.astro';
 ---
 
 <header class="bg-background text-foreground border-b sw-header">
@@ -33,7 +32,6 @@ import ThemeToggle from '../ui/button/ThemeToggle.astro';
                     <svg viewBox="0 0 24 24" aria-hidden="true" width="30" height="" fill="currentColor" class="transition-colors group-hover:text-[color:var(--accent)]"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M18 3a5 5 0 0 1 5 5v8a5 5 0 0 1 -5 5h-12a5 5 0 0 1 -5 -5v-8a5 5 0 0 1 5 -5zm-9 6v6a1 1 0 0 0 1.514 .857l5 -3a1 1 0 0 0 0 -1.714l-5 -3a1 1 0 0 0 -1.514 .857z" /></svg>
                 </a>
             </div>
-            <ThemeToggle />
             <button type="button" aria-label="Open menu" aria-controls="mobile-menu" aria-expanded="false" data-menu-btn class="md:hidden inline-flex items-center justify-center w-10 h-10 rounded-lg text-[color:var(--color-text-secondary)] hover:text-white">
                 <svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true"><path fill="currentColor" d="M3 6h18v2H3V6Zm0 5h18v2H3v-2Zm0 5h18v2H3v-2Z"/></svg>
             </button>

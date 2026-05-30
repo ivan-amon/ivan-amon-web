@@ -3,7 +3,6 @@
 /* Design tokens and theme overrides */
 @import "./tokens.css";
 @import "./themes/dark.css";
-@import "./themes/light.css";
 /* Project-specific utilities */
 @import "./utilities.css";
 
